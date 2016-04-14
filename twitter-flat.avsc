@@ -1,0 +1,43 @@
+{
+  "type" : "record",
+  "name" : "twitter_schema_flat",
+  "namespace" : "uk.co.cathtanconsulting.twitter",
+  "fields" : [ {
+    "name" : "created_at_str",
+    "type" : "string",
+    "default" : "unknown"
+  }, {
+    "name" : "created_at_long",
+    "type" : "long"
+  }, {
+    "name" : "tweet",
+    "type" : "string",
+    "doc" : "The content of the user's Twitter message"
+  }, {
+    "name" : "id",
+    "type" : "long"
+  }, {
+    "name" : "in_reply_to_status_id",
+    "type" : ["null","long"]
+  }, {
+    "name" : "in_reply_to_user_id",
+    "type" : ["null","long"]
+  }, {
+    "name" : "user_id",
+    "type" : "long"
+  }, {
+    "name" : "user_screen_name",
+    "type" : "string"
+  }, {
+    "name" : "geo_lat",
+    "type" : ["null","double"]
+  }, {
+    "name" : "geo_long",
+    "type" : ["null","double"]
+  }, {
+    "name" : "geo_type",
+    "type" : ["null","string"],
+    "doc"  : "Will either be Point or null"
+  }  ],
+  "doc:" : "A basic schema for storing Twitter messages"
+}
